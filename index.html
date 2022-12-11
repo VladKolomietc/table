@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="blade.png" type="image/x-icon">
+    <title>CSS_DINER_TABLE</title>
+</head>
+<body>
+    <table border="1">
+    <tr>
+        <th>№ <br>вправи</th>
+        <th>Скільки варіантів мені <br>вдалось зробити</th>
+        <th>Адаптований варіант розмітки (без неіснуючих тегів типу “plate” “bento” - вони є в грі,<br> але їх немає в реальній розробці)</th>
+        <th>Варіанти розв’язку<br>
+            застосовуємо color</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>7</td>
+        <td>
+            &ltdiv class="table"><br>
+                &ltp>hi&lt/p><br>
+                &ltp>hello&lt/p><br>
+                &lt/div>
+          </td>
+        <td class="answer">p {<br>
+            color: pink;<br>
+          }<br>
+          <br>
+            .table p {<br> 
+                color: pink; <br> 
+            }<br> 
+            <br>
+            * {<br> 
+                color: pink; <br> 
+            }<br> 
+            <br>
+            .table > p {<br> 
+                color: pink; <br> 
+            }<br> 
+            <br>
+            .table * {<br> 
+                color: pink; <br> 
+            }<br> 
+            <br>
+            p * {<br> 
+                color: pink; <br> 
+            }<br> 
+            <br>
+            .table  {<br> 
+                color: pink; <br> 
+            }<br> 
+
+            </td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>3</td>
+        <td>
+            &ltdiv class="table"><br>
+                &lth3>bye&lt/h3><br>
+                &ltp>hi&lt/p><br>
+                &lth3>bye&lt/h3><br>
+                &lt/div><br>
+          </td>
+        <td class="answer">
+            
+            h3 {<br>
+                color: pink;<br>
+            }<br>
+            <br>
+            .table > h3 {<br>
+                color: pink;<br>
+            }<br>
+            <br>
+            .table h3 {<br>
+                color: pink;<br>
+            }<br>       
+        </td>     
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>4</td>
+        <td>
+            &ltdiv class="table"> <br>
+            &ltp id="fancy">hello&lt/p><br>
+            &ltp>hi&lt/p><br>
+            &lth3> bye&lt/h3><br>
+                
+            &lt/div>
+              
+          </td>
+        <td class="answer">
+            #fancy {<br>
+                color: pink ;<br>
+              }<br>
+              <br>
+              p:nth-child(1) {<br>
+                color: pink ;<br>
+              }<br>
+              <br>
+              p:first-of-type  {<br>
+                color: pink ;<br>
+              }<br>
+              <br>
+              p:first-child {<br>
+                color: pink ;<br>
+              }<br>
+              
+        </td>     
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>3</td>
+        <td>
+            &ltdiv class="table"><br>
+            &lth2>bento&lt/h2><br>
+            &ltdiv class="plate"><br>
+            &ltp>apple plate&lt/p><br>
+            &lt/div><br>
+            &ltp>apple&lt/p><br>
+            &lt/div>&ltbr><br>
+          </td>
+        <td class="answer">
+            <br>
+            .plate {<br>
+                color: blue ;<br>
+              }<br>
+              <br>
+            .plate > p {<br>
+                color: blue ;<br>
+              }<br>
+              <br>
+            p:first-of-type {<br>
+                color: blue ;<br>
+              }<br>
+        </td>     
+    </tr>
+    <tr>
+        <td>5</td>
+        <td>4</td>
+        <td>
+            &ltdiv class="table"><br>
+            &ltheader><br>
+            &lth2>orange&lt/h2><br>
+            &lt/header><br>
+            &ltsection id="fancy"><br>
+            &ltp>fancy cucumber&lt/p><br>
+            &lt/section><br>
+            &ltsection id="plate"><br>
+            &ltp>kukumber&lt/p><br>
+            &lt/section><br>
+            &lt/div><br>
+          </td>
+        <td class="answer">
+            <br>
+            #fancy {<br>
+                color: blue;<br>
+              }<br>
+            <br>
+            section:first-of-type {<br>
+                color: blue;<br>
+              }<br>
+            <br>
+            section:first-of-type p {<br>
+                color: blue;<br>
+              }<br>
+            <br>
+            #fancy p {<br>
+                color: blue ;<br>
+              }<br>
+        </td>     
+    </tr>
+    <tr>
+        <td>6</td>
+        <td>1</td>
+        <td>
+            
+            &ltdiv class="table"><br>
+            &lth1>h1&lt/h1><br>
+            &lth1 class="small">h1&lt/h1><br>
+            &ltsection><br>
+            &lth1 class="small">h1&lt/h1><br>
+            &lt/section><br>
+            &ltsection>&lt/section><br>
+            &lt/div><br>
+            
+          </td>
+        <td class="answer">
+            <br>
+            .small  {<br>
+                color: blue ;<br>
+              }<br>
+              <br>
+        </td>     
+    </tr>
+    <tr>
+        <td>7</td>
+        <td>2</td>
+        <td>
+            &ltdiv class="table"><br>
+            &lth1>h1&lt/h1><br>
+            &lth1 class="small">h1&lt/h1><br>
+            &ltsection><br>
+            &lth3 class="small">orange&lt/h3><br>
+            &lt/section><br>
+            &ltsection><br>
+            &lth3>orange&lt/h3><br>
+            &lt/section><br>
+            &ltsection><br>
+            &lth3 class="small">orange&lt/h3><br>
+            &lt/section><br>
+            &lt/div><br>
+          </td>
+        <td class="answer">
+            <br>
+            h3.small {<br>
+                color: blue ;<br>
+              }<br>
+              <br>
+              section  > h3.small {<br>
+                color: blue;<br>
+              }<br>
+              header  > h3.small {<br>
+                color: blue;<br>
+              }<br>
+              <br>
+            
+        </td>     
+    </tr>
+    <tr>
+        <td>8</td>
+        <td>3</td>
+        <td>
+            &ltdiv class="table"><br>
+            &ltheader><br>
+            &lth2>orange bento&lt/h2><br>
+            &lt/header><br>
+            &lth2 class="small">orange small&lt/h2><br>
+            &ltheader><br>
+            &lth2 class="small">orange bento&lt/h2><br>
+            &lt/header><br>
+            &ltheader><br>
+            &lth1 class="small">apple bento&lt/h1><br>
+            &lt/header><br>
+            &ltheader><br>
+            &lth2 class="small">orange bento&lt/h2><br>
+            &lt/header><br>
+            &lt/div><br>
+            
+          </td>
+        <td class="answer">
+            <br>
+            header > h2.small  {<br>
+                color: blue;<br>
+              }<br>
+            <br>
+            header:nth-child(3), header:nth-child(5) > h2.small  {<br>
+                color: blue;<br>
+              }<br>
+              <br>
+              header:nth-child(3), header:nth-child(5)  {<br>
+                color: blue;<br>
+              }<br>
+              <br>
+        </td>     
+    </tr>
+    <tr>
+        <td>9</td>
+        <td>1</td>
+        <td>
+            &ltdiv class="table"><br>
+                &lth1 class="small">pickle small&lt/h1><br>
+                &lth1 >pickle &lt/h1><br>
+                &ltheader> &lth1> pickle &lt/h1> &lt/header><br>
+                &ltsection> &lth1> pickle &lt/h1> &lt/section><br>
+                &ltheader> &lth1> pickle &lt/h1> &lt/header><br>
+                &lth1 >pickle &lt/h1><br>
+                &lth1 class="small">pickle small&lt/h1><br>
+                &lt/div><br>
+          </td>
+        <td class="answer">
+            <br>
+            header , section {<br>
+                color: blue;<br>
+              }<br>
+              <br>
+        </td>     
+    </tr>
+    <tr>
+        <td>10</td>
+        <td>2</td>
+        <td>
+            &ltdiv class="table"><br>
+            &lth1>apple&lt/h1><br>
+            &ltheader><br>
+            &ltp>orange&lt/p><br>
+                &lt/header><br>
+                &ltsection>bento&lt/section><br>
+                &ltsection> &ltp>orange&lt/p> &lt/section><br>
+                &ltheader id="fancy">fancy&lt/header><br>
+                &lt/div><br>
+          </td>
+        <td class="answer">
+            <br>
+            div {<br>
+                color: blue;<br>
+              }<br>
+              <br>
+              * {<br>
+                color: blue;<br>
+              }<br>
+              <br>
+        </td>     
+    </tr>
+    <tr>
+        <td>11</td>
+        <td>2</td>
+        <td>
+            &ltdiv class="table"><br>
+            &ltsection id="fancy">&lth1 class="small">orange&lt/h1>&lt/section><br>
+            &ltsection>&ltp>cucumber&lt/p>&lt/section><br>
+            &lth3 class="small">apple&lt/h3><br>
+            &ltsection>&lth3>apple&lt/h3>&lt/section><br>
+                </div>
+          </td>
+        <td class="answer">
+            <br>
+            section * {<br>
+                color: blue;<br>
+              }<br>
+              <br>
+              section > h3 , h1 , p {<br>
+                color: blue;<br>
+              }<br>
+              <br>
+        </td>     
+    </tr>
+    <tr>
+        <td>12</td>
+        <td>2</td>
+        <td>
+          &ltdiv class="table"><br>
+            &ltheader><br>
+              &ltp class="small">apple&lt/p><br>
+            &lt/header><br>
+            &ltsection><br>
+              plate<br>
+            &lt/section><br>
+            &ltp class="small">apple&lt/p><br>
+            &ltsection><br>
+              plate<br>
+            &lt/section><br>
+            &ltp >apple&lt/p><br>
+            &ltp class="small">apple&lt/p><br>
+            &ltp class="small">apple&lt/p><br>
+          </div>
+          </td>
+        <td class="answer">
+          <br>
+          section + p {<br>
+            color: blue;<br>
+          }<br>
+          <br>
+          p:nth-child(3), p:nth-child(5) {<br>
+            color: blue;<br>
+          }<br>
+          <br>
+        </td>     
+    </tr>
+    <tr>
+        <td>13</td>
+        <td>3</td>
+        <td>
+          &ltdiv class="table"><br>
+            &ltp> pickle &lt/p><br>
+            &ltsection>&lth4 class small>orange&lt/h4>&lt/section><br>
+            &ltp class="small"> pickle &lt/p><br>
+            &ltp> pickle &lt/p><br>
+            &ltheader>&ltp> pickle &lt/p>&lt/header><br>
+            &ltheader>&ltp class="small"> pickle &lt/p>&lt/header><br>
+          &lt/div><br>
+          &lt/td><br>
+        <td class="answer">
+          <br>
+          section ~ p {<br>
+            color: blue;<br>
+          }<br>
+          <br>
+          p:nth-child(3), p:nth-child(4) {<br>
+            color: blue;<br>
+          }<br>
+          <br>
+          section + p + p , section + p {<br>
+            color: blue;<br>
+          }<br>
+          <br>
+        </td>     
+    </tr>
+    <tr>
+        <td>14</td>
+        <td>1</td>
+        <td>
+          <br>
+            &ltdiv class="table"><br>
+            &ltheader>&ltsection>&ltp>apple&lt/p>&lt/section>&lt/header><br>
+            &ltheader>&ltp>apple&lt/p>&lt/header><br>
+            &ltheader>plate&lt/header><br>
+            &ltp>apple&lt/p><br>
+            &ltp class="small">apple&lt/p><br>
+          &lt/div><br>
+          <br>
+        </td>
+        <td class="answer">
+          <br>
+          header > p {<br>
+            color: blue;<br>
+          }  <br>
+          <br>
+        </td>     
+    </tr>
+    <tr>
+        <td>15</td>
+        <td>6</td>
+        <td>
+          &ltdiv class="table"><br>
+            &ltsection>bento&lt/section><br>
+            &ltheader>plate&lt/header><br>
+            &ltheader><br>
+              &ltp>orange&lt/p><br>
+              &ltp>orange&lt/p><br>
+              &ltp>orange&lt/p><br>
+            &lt/header><br>
+            &lth4 class="small">pickle&lt/h4><br>
+          &lt/div><br>
+          </td>
+        <td class="answer">
+          <br>
+          p:first-child {<br>
+            color: blue ;<br>
+          }<br>
+          <br>
+          p:nth-child(1) {<br>
+            color: blue ;<br>
+          }<br>
+          <br>
+          p:first-of-type {<br>
+            color: blue ;<br>
+          }<br>
+          <br>
+          header > p:first-child {<br>
+            color: blue <br>
+          }<br>
+          <br>
+          header > p:nth-child(1) {<br>
+            color: blue ;<br>
+          }<br>
+          <br>
+          header > p:first-of-type {<br>
+            color: blue ;<br>
+          }<br>
+          <br>
+        </td>     
+    </tr>
+    <tr>
+        <td>16</td>
+        <td>5</td>
+        <td>
+          &ltdiv class="table"><br>
+            &ltsection>&ltp>apple&lt/p>&lt/section><br>
+            &ltsection>&lth4>pickle&lt/h4>&lt/section><br>
+            &ltheader>&lth4>pickle&lt/h4>&lt/header><br>
+            &ltsection>&lth4 class="small">orange&lt/h4>&lth3>orange&lt/h3>&lt/section><br>
+            &lth4 class="small">pickle&lt/h4><br>
+          &lt/div><br>
+          </td>
+        <td class="answer">
+          <br>
+          section :only-child {<br>
+            color: blue;<br>
+          }<br>
+          <br>
+          section > p , section > h4 {<br>
+            color: blue;<br>
+          }<br>
+          <br>
+          p:first-child , section > h4 {<br>
+            color: blue;<br>
+          }<br>
+          <br>
+          p:nth-child(1) , section > h4 {<br>
+            color: blue;<br>
+          }<br>
+          <br>
+          p:first-of-type , section > h4 {<br>
+            color: blue;<br>
+          }<br>
+          <br>
+        </td>     
+    </tr>
+    <tr>
+        <td>17</td>
+        <td>5</td>
+        <td>
+
+          &ltdiv class="table"><br>
+            &ltsection id="fancy"><br>
+              &ltp class="small">apple&lt/p><br>
+            &lt/section><br>
+            &ltsection>plate&lt/section><br>
+            &ltsection><br>
+            &lth4 class="small">orange&lt/h4><br>
+            &lth4>orange&lt/h4><br>
+            &lt/section><br>
+            &lth3 class="small">pickle&lt/h3><br>
+            &lt/div><br>
+
+          </td>
+        <td class="answer">
+          <br>
+          .small:last-child {<br>
+            color: blue;<br>
+          }<br>
+          <br>
+          p , h3 {<br>
+            color: blue;<br>
+          }<br>
+          <br>
+          p:first-child , h3:nth-child(4) {<br>
+            color: blue;<br>
+          }<br>
+          <br>
+          p:nth-child(1) , h3:nth-child(4) {<br>
+            color: blue;<br>
+          }<br>
+          <br>
+        </td>     
+    </tr>
+    <tr>
+        <td>18</td>
+        <td>3</td>
+        <td>
+          <br>
+          &ltdiv class="table"><br>
+            &ltsection>plate&lt/section><br>
+            &ltsection>plate&lt/section><br>
+            &ltsection>plate&lt/section><br>
+            &ltsection id="fancy">plate fancy<br>
+            &lt/section><br>
+          &lt/div><br>
+          <br>
+          </td>
+        <td class="answer">
+          <br>
+          section:nth-child(3) {<br>
+            color: blue;<br>
+          }<br>
+          <br>
+          section:nth-of-type(3) {<br>
+            color: blue;<br>
+          }<br>
+          <br>
+          section:nth-last-child(2) {<br>
+            color: blue;<br>
+          }<br>
+          <br>
+        </td>     
+    </tr>
+    <tr>
+        <td>19</td>
+        <td>4</td>
+        <td>
+          &ltdiv class="table"><br>
+          &ltsection>plate&lt/section><br>
+            &ltheader>bento&lt/header><br>
+            &ltsection>&lth4>orange&lt/h4>&lth4>orange&lt/h4>&lth4>orange&lt/h4>&lt/section><br>
+            &ltheader>bento&lt/header><br>
+            &lt/div><br>
+          </td>
+        <td class="answer">
+          <br>
+          header:nth-last-child(3) {<br>
+            color: blue;<br>
+          }<br>
+          <br>
+          header:first-of-type {<br>
+            color: blue;<br>
+          }<br>
+          <br>
+          header:nth-child(2) {<br>
+            color: blue;<br>
+          }<br>
+          <br>
+          header:nth-of-type(1) {<br>
+            color: blue;<br>
+          }<br>
+          <br>
+
+        </td>     
+    </tr>
+    <tr>
+        <td>20</td>
+        <td>4</td>
+        <td>
+          <br>
+          &ltdiv class="table"><br>
+            &lth4 class="small">orange&lt/h4><br>
+            &ltp>apple&lt/p><br>
+            &ltp class="small">apple&lt/p><br>
+            &ltp>apple&lt/p><br>
+            &ltp class="small">apple&lt/p><br>
+            &ltsection><br>
+              &lth4 class="small">orange&lt/h4><br>
+              &lth4>orange&lt/h4><br>
+            &lt/section><br>
+            &lt/div><br>
+            <br>  
+          </td>
+        <td class="answer">
+          <br>
+          p:first-of-type {<br>
+            color: blue;<br>
+          }<br>
+          <br>
+          p:nth-child(2) {<br>
+            color: blue;<br>
+          }<br>
+          <br>
+          p:nth-last-child(5) {<br>
+            color: blue;<br>
+          }<br>
+          <br>
+          p:nth-of-type(1) {<br>
+            color: blue;<br>
+          }<br>
+          <br>
+        </td>     
+    </tr>
+    <tr>
+        <td>21</td>
+        <td>3</td>
+        <td>
+          &ltdiv class="table"><br>
+            &ltsection>plate&lt/section><br>
+            &ltsection>plate&lt/section><br>
+            &ltsection>plate&lt/section><br>
+            &ltsection>plate&lt/section><br>
+            &ltsection id="fancy">plate&lt/section><br>
+            &ltsection>plate&lt/section><br>
+          &lt/div><br>
+          </td>
+        <td class="answer">
+          <br>
+          section:nth-of-type(2), section:nth-of-type(4), section:nth-of-type(6) {<br>
+            color: blue;<br>
+          }<br>
+          <br>
+          section:nth-last-child(1), section:nth-last-child(3), section:nth-last-child(5) {<br>
+            color: blue;<br>
+          }<br>
+          <br>
+          section:nth-child(2), section:nth-child(4), section:nth-child(6) {<br>
+            color: blue;<br>
+          }<br>
+          <br>
+        </td>     
+    </tr>
+    <tr>
+        <td>22</td>
+        <td>4</td>
+        <td>
+          &ltdiv class="table"><br>
+            &ltsection>plate&lt/section><br>
+            &ltsection>&lth4 class="small">pickle&lt/h4>&lt/section><br>
+            &ltsection>&ltp class="small">apple&lt/p>&lt/section><br>
+           &ltsection>plate&lt/section><br>
+            &ltsection>&ltp>apple&lt/p>&lt/section><br>
+            &ltsection>plate&lt/section><br>
+          &lt/div><br>
+          </td>
+        <td class="answer">
+          <br>
+          section:nth-of-type(2n+3){<br>
+            color: blue;<br>
+          }<br>
+          <br>
+          section:nth-of-type(3), section:nth-of-type(5){<br>
+            color: blue;<br>
+          }<br>
+          <br>
+          section:nth-child(3), section:nth-child(5){<br>
+            color: blue;<br>
+        }<br>
+        <br>
+        section:nth-last-child(2), section:nth-last-child(4){<br>
+          color: blue;<br>
+      }<br>
+      <br>
+        </td>     
+    </tr>
+    <tr>
+        <td>23</td>
+        <td>6</td>
+        <td>
+          &ltdiv class="table"><br>
+            &ltsection class="fancy"><br>
+              &ltp class="small">apple&lt/p><br>
+              &ltp>apple&lt/p><br>
+            &lt/section><br>
+            &ltsection>&ltp>apple&lt/p>&lt/section><br>
+            &ltsection>&lth4>pickle&lt/h4>&lt/section><br>
+          &lt/div><br>
+          </td>
+        <td class="answer">
+          <br>
+          p:only-of-type {<br>
+            color: blue;<br>
+          }<br>
+          <br>
+          .small:only-of-type {<br>
+            color: blue;<br>
+          }<br>
+          <br>
+          section:not(.fancy) > p {<br>
+            color: blue;<br>
+          }<br>
+          <br>
+          section:not(.fancy) > .small {<br>
+            color: blue;<br>
+          }<br>
+          <br>
+          .small:last-child {<br>
+            color: blue;<br>
+          }<br>
+          <br>
+          .small:last-of-type {<br>
+            color: blue;<br>
+            <br>
+    </tr>
+    <tr>
+        <td>24</td>
+        <td>4</td>
+        <td>
+          &ltdiv class="table"><br>
+            &ltp class="small">orange&lt/p><br>
+            &ltp class="small">orange&lt/p><br>
+            &lth3>pickle&lt/h3><br>
+            &lth3>pickle&lt/h3><br>
+            &lth4 class="small">apple&lt/h4><br>
+            &lth4 class="small">apple&lt/h4>  <br>
+            &lt/div><br>
+          </td>
+        <td class="answer">
+          <br>
+          .small:last-of-type {<br>
+            color: blue;<br>
+          }<br>
+          <br>
+          p:nth-child(2), h4:nth-child(6)  {<br>
+            color: blue;<br>
+          }<br>
+          <br>
+          p:nth-of-type(2), h4:nth-child(6)  {<br>
+            color: blue;<br>
+          }<br>
+          <br>
+          p:nth-of-type(2), h4:nth-of-type(2)  {<br>
+            color: blue;<br>
+          }<br>
+          <br>
+        </td>     
+    </tr>
+    <tr>
+        <td>25</td>
+        <td>8</td>
+        <td>
+          &ltdiv class="table"><br>
+            &ltheader>bento&lt/header><br>
+            &ltheader>&lth4 class="small">pickle&lt/h4>&lt/header><br>
+            &ltsection>plate&lt/section><br>
+            &ltheader>bento&lt/header><br>
+          &lt/div> <br>
+          </td>
+        <td class="answer">
+          <br>
+          header:empty {<br>
+            color: blue;<br>
+          }<br>
+          <br>
+          header:first-child , header:last-child  {<br>
+            color: blue;<br>
+          }<br>
+          <br>
+          header:last-of-type, header:first-child {<br>
+            color: blue;<br>
+            }<br>
+            <br>
+            header:first-of-type, header:last-child {<br>
+              color: blue;<br>
+              }<br>
+              <br>
+              header:nth-child(1), header:nth-child(4) {<br>
+                color: blue;<br>
+                }   <br>
+                <br>
+                header:nth-of-type(1), header:nth-of-type(3) {<br>
+                  color: blue;<br>
+                  }   <br>
+                  <br>
+                  header:nth-last-child(4), header:nth-last-child(1) {<br>
+                    color: blue;<br>
+                    }<br>
+                    <br>
+                    header:nth-of-type(0n+3), header:nth-of-type(2n+1){<br>
+                      color: blue;<br>
+                      }<br>
+          <br>
+        </td>     
+    </tr>
+    <tr>
+        <td>26</td>
+        <td>1</td>
+        <td>
+          &ltdiv class="table"><br>
+            &ltsection class="fancy">&ltp class="small">apple&lt/p>&lt&lt/section><br>
+            &ltsection>&ltp>apple&lt/p>&lt/section><br>
+            &ltp>apple&lt/p><br>
+            &ltsection>&lth4 class="small">orange&lt/h4>&lt/section><br>
+            &lth5 class="small">pickle&lt/h5><br>
+          &lt/div><br>
+          </td>
+        <td class="answer">
+          p:not(.small){<br>
+            color: blue;<br>
+            }<br>
+        </td>     
+    </tr>
+    <tr>
+        <td>27</td>
+        <td>5</td>
+        <td>
+          &ltdiv class="table"><br>
+            &ltheader>&ltp class="small">apple&lt/p>&lt/header><br>
+            &ltp for="Ethan">apple&lt/p><br>
+            &ltsection for="Alice">&lth4>pickle&lt/h4>&lt/section><br>
+            &ltheader for="Clara">&lth3>orange&lt/h3>&lt/header><br>
+            &lth4>pickle&lt/h4><br>
+          &lt/div><br>
+          </td>
+        <td class="answer">
+          <br>
+          *[for] {<br>
+            color: blue;<br>
+            }<br>
+            <br>
+            [for] {<br>
+              color: blue;<br>
+              }<br>
+              <br>
+              p:not(.small), section, header:last-of-type {<br>
+                color: blue;<br>
+                }<br>
+                <br>
+                p:not(.small), section, header:nth-of-type(2) {<br>
+                  color: blue;<br>
+                  }<br>
+                  <br>
+                  p:not(.small), section, header:nth-child(4) {<br>
+                    color: blue;<br>
+                    }<br>
+                    <br>
+        </td>     
+    </tr>
+    <tr>
+        <td>28</td>
+        <td>4</td>
+        <td>
+          &ltdiv class="table">
+            &ltsection for="Sarah">&lth4>pickle&lt/h4>&lt/section> 
+            &ltsection for="luke">&ltp>apple&lt/p>&lt/section>
+            &ltsection>plate&lt/section>
+            &ltheader for="Steve">&lth5>orange&lt/h5>&lt/header>
+          &lt/div>
+          </td>
+        <td class="answer">
+          <br>
+          section[for] {<br>
+            color: blue;<br>
+            }<br>
+            <br>
+            section:nth-of-type(1), section:nth-of-type(2){<br>
+              color: blue;<br>
+              }<br>
+              <br>
+              section:nth-of-type(2), section:first-child{<br>
+                color: blue;<br>
+                }<br>
+                <br>
+                section:nth-of-type(2), section:first-of-type{<br>
+                  color: blue;<br>
+                  }<br>
+                  <br>
+        </td>     
+    </tr>
+    <tr>
+        <td>29</td>
+        <td>6</td>
+        <td>
+          &ltdiv class="table"><br>
+            &ltp for="Alexei">apple&lt/p><br>
+            &ltsection for="Albina">&ltp>apple&lt/p>&lt/section><br>
+            &ltsection for="Vitaly">&lth4>orange&lt/h4>&lt/section><br>
+            &lth5>pickle&lt/h5><br>
+          &lt/div><br>
+          </td>
+        <td class="answer">
+          <br>
+          section:nth-of-type(2){<br>
+            color: blue;<br>
+            }<br>
+            <br>
+            section:last-of-type{<br>
+              color: blue;<br>
+              }<br>
+              <br>
+              section:nth-last-child(2){<br>
+                color: blue;<br>
+                }<br>
+                <br>
+                section:nth-child(3) {<br>
+                  color: blue;<br>
+                  }<br>
+                  <br>
+                  section[for="Vitaly"]  {<br>
+                    color: blue;<br>
+                    }<br>
+                    <br> 
+                    section[for^="Vi"]  {<br> 
+                      color: blue;<br> 
+                      }<br> 
+                      <br> 
+        </td>     
+    </tr>
+    <tr>
+        <td>30</td>
+        <td>5</td>
+        <td>
+          &ltdiv class="table"><br> 
+            &ltsection for="Sam">&lth4>pickle&lt/h4>&lt/section><br> 
+            &ltheader for="Sarah">&ltp class="small">apple&lt/p>&lt/header><br> 
+            &ltheader for="Mary">&lth5>orange&lt/h5>&lt/header><br> 
+          &lt/div><br> 
+          </td>
+        <td class="answer">
+          <br> 
+          [for^="Sa"]  {<br> 
+            color: blue;<br> 
+            }<br> 
+            <br> 
+            section:nth-child(1) , header:nth-child(2){<br> 
+              color: blue;<br> 
+            }<br> 
+            <br> 
+            section:nth-child(1) , header:nth-of-type(1){<br> 
+              color: blue;<br> 
+            }<br> 
+            <br> 
+            section:nth-child(1) , header:first-of-type{<br> 
+              color: blue;<br> 
+            }<br> 
+            <br> 
+            *[for^="Sa"] {<br> 
+              color: blue;<br> 
+            }<br> 
+            <br> 
+        </td>     
+    </tr>
+    <tr>
+        <td>31</td>
+        <td>4</td>
+        <td>
+          &ltdiv class="table"><br> 
+            &ltp class="small">apple&lt/p><br> 
+            &ltsection for="Hayato">&lth4>pickle&lt/h4>&lt/section><br> 
+            &ltp>apple&lt/p><br> 
+            &ltheader for="Minato">&lth5>orange&lt/h5>&lt/header><br> 
+            &lth4 class="small">pickle&lt/h4><br> 
+          &lt/div><br> 
+          </td>
+        <td class="answer">
+          <br> 
+          [for$="to"] {<br> 
+            color: blue;<br> 
+          }<br> 
+          <br> 
+          [for$="o"] {<br> 
+            color: blue;<br> 
+          }<br> 
+          <br> 
+          [for$="ato"] {<br> 
+            color: blue;<br> 
+          }<br> 
+          <br> 
+          section , header{<br> 
+            color: blue;<br> 
+          }<br> 
+          <br>  
+        </td>     
+    </tr>
+    <tr>
+        <td>32</td>
+        <td>12</td>
+        <td>
+          &ltdiv class="table"><br> 
+            &ltsection for="Robbie">&ltp >apple&lt/p>   &lt/section><br> 
+            &ltsection for="Timmy">&lth4>pickle&lt/h4>&lt/section><br> 
+            &ltsection for="Bobby">&lth5>orange&lt/h5>&lt/section><br> 
+          &lt/div><br> 
+          </td>
+        <td class="answer">
+          <br> 
+          [for*="obb"] {<br> 
+            color: blue;<br> 
+          }<br> 
+          <br> 
+          [for*="bb"] {<br> 
+            color: blue;<br> 
+          }<br> 
+          <br> 
+          [for*="b"] {<br> 
+            color: blue;<br> 
+          }<br> 
+          <br> 
+          section:first-of-type , section:last-of-type {<br> 
+            color: blue;<br> 
+          }<br> 
+          <br> 
+          section:first-of-type , section:last-child {<br> 
+            color: blue;<br> 
+          }<br> 
+          <br> 
+          section:first-child , section:last-child {<br> 
+            color: blue;<br> 
+          }<br> 
+          <br> 
+          section:nth-child(1) , section:nth-child(3) {<br> 
+            color: blue;<br> 
+          }<br> 
+          <br> 
+          section:nth-last-child(1) , section:nth-last-child(3) {<br> 
+            color: blue;<br> 
+          }<br> 
+          <br> 
+          section:nth-of-type(1) , section:nth-of-type(3) {<br> 
+            color: blue;<br> 
+          }<br> 
+          <br> 
+          section:nth-child(1) , section:nth-of-type(3) {<br> 
+            color: blue;<br> 
+          }<br> 
+          <br> 
+          section:nth-of-type(1) , section:nth-child(3) {<br> 
+            color: blue;<br> 
+          }<br> 
+          <br> 
+          section:nth-of-type(2n+1){<br> 
+            color: blue;<br> 
+          }<br> 
+          <br> 
+        </td>     
+    </tr>
+    <tr>
+      <td>Всього:</td>
+      <td></td>
+      
+    </tr>
+    </table>
+</body>
+</html>
+
+
+        
+    

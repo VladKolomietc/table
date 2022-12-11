@@ -1,0 +1,21 @@
+* {
+    margin: 0 auto;
+}
+body {
+    background-color: #28284f ;
+}
+table {
+    margin-top: 100px;
+    color: white ;
+    border: 3px solid;
+    font-size: 20px;
+}
+.answer {
+    color: rgb(2, 244, 244);
+}
+table{
+    margin-bottom: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 50px;
+}
